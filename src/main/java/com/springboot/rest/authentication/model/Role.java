@@ -27,6 +27,6 @@ public class Role {
     private Collection<User> users;
 
     public Role(ERole role){
-
+       this.name = role;
     }
 }
