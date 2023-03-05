@@ -1,5 +1,6 @@
 package com.springboot.rest.authentication.model;
 
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,8 +11,8 @@ import java.util.Collection;
 @Data
 @Entity
 @Table(name = "roles")
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor (access= AccessLevel.PRIVATE, force=true)
 public class Role {
 
     @Id
