@@ -31,3 +31,27 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+
+## Java
+# either the 3rd party diff or IDEA:
+*.java.orig
+
+# Package Files
+**/build/libs/*.jar
+*.war
+*.ear
+
+#Gradle
+.gradle
+*/.gradle
+
+# Logging
+*.log
+*.log.gz
+*.log-*.gz
+logs/
