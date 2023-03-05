@@ -16,12 +16,12 @@ public class SpringbootRestAuthenticationApplication {
 	}
 
 	/*Preload the data to insert into database*/
-	@Bean
+	/*@Bean
 	public CommandLineRunner roleLoader(RoleRepository repo) {
 		return args -> {
 			repo.save(new Role(ERole.ROLE_ADMIN));
 			repo.save(new Role(ERole.ROLE_USER));
 		};
-	}
+	}*/
 
 }
