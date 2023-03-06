@@ -1,8 +1,11 @@
 package com.springboot.rest.authentication;
 
+import com.springboot.rest.authentication.model.EIngType;
 import com.springboot.rest.authentication.model.ERole;
+import com.springboot.rest.authentication.model.IngredientType;
 import com.springboot.rest.authentication.model.Role;
 import com.springboot.rest.authentication.repository.RoleRepository;
+import com.springboot.rest.authentication.repository.TypeRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,12 +20,23 @@ public class SpringbootRestAuthenticationApplication {
 
 	//Preload the data to insert into database
 
-	@Bean
+	/*@Bean
 	public CommandLineRunner roleLoader(RoleRepository repo) {
 		return args -> {
 			repo.save(new Role(ERole.ROLE_ADMIN));
 			repo.save(new Role(ERole.ROLE_USER));
 		};
-	}
+	}*/
+
+	/*@Bean
+	public CommandLineRunner typeLoader(TypeRepository typeRepo) {
+		return args -> {
+			typeRepo.save(new IngredientType(EIngType.WRAP));
+			typeRepo.save(new IngredientType(EIngType.CHEESE));
+			typeRepo.save(new IngredientType(EIngType.PROTEIN));
+			typeRepo.save(new IngredientType(EIngType.VEGGIES));
+			typeRepo.save(new IngredientType(EIngType.SAUCE));
+		};
+	}*/
 
 }
