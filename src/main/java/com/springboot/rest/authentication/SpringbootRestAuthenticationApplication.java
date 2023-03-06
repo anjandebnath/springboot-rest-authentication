@@ -28,15 +28,6 @@ public class SpringbootRestAuthenticationApplication {
 		};
 	}*/
 
-	/*@Bean
-	public CommandLineRunner typeLoader(TypeRepository typeRepo) {
-		return args -> {
-			typeRepo.save(new IngredientType(EIngType.WRAP));
-			typeRepo.save(new IngredientType(EIngType.CHEESE));
-			typeRepo.save(new IngredientType(EIngType.PROTEIN));
-			typeRepo.save(new IngredientType(EIngType.VEGGIES));
-			typeRepo.save(new IngredientType(EIngType.SAUCE));
-		};
-	}*/
+
 
 }

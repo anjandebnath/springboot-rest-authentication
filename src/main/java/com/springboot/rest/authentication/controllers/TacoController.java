@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -27,6 +26,26 @@ public class TacoController {
 
     @Autowired
     TypeRepository typeRepository;
+
+    @PostMapping("/create_types")
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<?> createIngredients() {
+
+        try{
+            // get Ingredient type by value
+            typeRepository.save(new IngredientType(EIngType.WRAP));
+            typeRepository.save(new IngredientType(EIngType.CHEESE));
+            typeRepository.save(new IngredientType(EIngType.PROTEIN));
+            typeRepository.save(new IngredientType(EIngType.VEGGIES));
+            typeRepository.save(new IngredientType(EIngType.SAUCE));
+
+            return new ResponseEntity<>("Type save success", HttpStatus.OK);
+
+        }catch (Exception e){
+            e.printStackTrace();
+            return new ResponseEntity<>(e.toString(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 
     @PostMapping("/create_ingredients")
     @PreAuthorize("hasRole('ADMIN')")
@@ -53,7 +72,6 @@ public class TacoController {
             e.printStackTrace();
             return new ResponseEntity<>(e.toString(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
-
     }
 
     @GetMapping("/get_ingredients")
