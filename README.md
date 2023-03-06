@@ -8,9 +8,10 @@ Spring security with Rest API Authentication &amp; Authorization and Mysql DB co
   1. Name
   2. Email
   3. Password
-- [x] The pre-registered USERs can sign in using the login credentials (Email & Password).
+- [x] The pre-registered USERs can sign in using the login credentials (Name & Password).
 - [x] After successful authentication, the user will get JWT token to authorize the APIs. 
-- [x] Use Relational DB [MYSQL/POSTGRE] to store data
-- [x] Docker compose for database and db admin pannel
-- [x] Preload the Roles when server startup
-- [x] After authentication, create Taco ingredient types, Taco Ingredients and Get all Taco Ingredients List.
+- [x] Use Relational DB [MYSQL] to store data.
+- [x] Docker compose for DB and db admin pannel.
+- [x] Preload the Roles to DB when server startup.
+- [x] After authentication, ADMIN create Taco ingredient types & Taco Ingredients. 
+- [x] After authentication, ADMIN/USER both can request to get all Taco Ingredients List.
